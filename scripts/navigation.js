@@ -4,6 +4,11 @@ function showHomeView() {
     loadImagesOnMap();
 }
 
+function showGalleryView() {
+    showView("galleryView");
+    loadImages();
+}
+
 function showUploadView() {
     showView("uploadView");
 }
@@ -12,9 +17,15 @@ function showRegisterView() {
     showView("registerView");
 }
 
+function showUsersView() {
+    showView("usersView")
+
+}
+
 function showLoginView() {
     showView("loginView");
 }
+
 
 function showView(view) {
     $('main > section').hide();
