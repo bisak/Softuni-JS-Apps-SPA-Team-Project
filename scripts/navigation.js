@@ -22,7 +22,8 @@ function showRegisterView() {
 }
 
 function showUsersView() {
-    showView("usersView")
+    showView("usersView");
+    listUsers();
 }
 
 function showLoginView() {
