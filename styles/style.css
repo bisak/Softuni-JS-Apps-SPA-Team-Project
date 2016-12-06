@@ -2,6 +2,11 @@ footer.page-footer {
     margin-top: 0;
 }
 
+.chip {
+    background-color: #0094ff;
+    color: #ffffff;
+}
+
 body {
     display: flex;
     min-height: 100vh;

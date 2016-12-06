@@ -29,6 +29,12 @@
             <li><a href="#" class="loginViewButton">Login</a></li>
             <li><a href="#" class="registerViewButton">Register</a></li>
             <li><a href="#" class="logoutButton">Log out</a></li>
+            <li id="avatarContainer" style="display: none">
+                <div class="chip">
+                    <img id="avatarImage" src="">
+                    <span id="usernameContainer"></span>
+                </div>
+            </li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="#" class="homeViewButton">Home</a></li>
@@ -99,13 +105,14 @@
                 <div>
                     <p id="editPictureName">${data.fileName}</p>
                     <div style="width: 70%">
-                        <img id="editPicture" style="border-radius: 2px;" class="materialboxed responsive-img z-depth-1" src="">
+                        <img id="editPicture" style="border-radius: 2px;" class="materialboxed responsive-img z-depth-1"
+                             src="">
                     </div>
                     <div style="width: 70%" class="input-field col s12">
                         <textarea id="editedDescription" class="materialize-textarea">${data.description}</textarea>
                         <label class="active">Description</label>
                     </div>
-                </div>`
+                </div>
             </div>
         </div>
     </section>

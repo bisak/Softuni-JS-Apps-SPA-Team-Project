@@ -1,9 +1,11 @@
 /*Add navigation here*/
 function showHomeView() {
     showView("homeView");
-    if(isUserLoggedIn()){
+    if (isUserLoggedIn()) {
         loadImagesOnMap();
-    }else{
+        showUserGreeting()
+    } else {
+        $("#avatarContainer").hide();
         showSuccessAlert("Login to view images!")
     }
 }

@@ -14,5 +14,21 @@ function loginUser() {
         saveAuthInSession(userInfo);
         showHomeView();
         showHideMenuLinks();
+
+    }
+}
+
+function showUserGreeting() {
+    $.ajax({
+        method: "GET",
+        url: kinveyBaseUrl + "user/" + kinveyAppKey + "/" + sessionStorage.userId,
+        headers: getKinveyUserAuthHeaders()
+    }) .then(getAvatarSuccess).catch(handleAjaxError);
+
+    function getAvatarSuccess(data) {
+        $("#usernameContainer").empty();
+        $("#avatarContainer").show();
+        $("#avatarImage").attr("src", data.picture);
+        $("#usernameContainer").text(data.username);
     }
 }
